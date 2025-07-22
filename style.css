@@ -1,0 +1,643 @@
+/* Windows XP Authentic Style CSS */
+@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Tahoma", "MS Sans Serif", sans-serif;
+    font-size: 11px;
+    overflow: hidden;
+    user-select: none;
+    cursor: default;
+}
+
+/* Desktop Background */
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0054e3 0%, #0054e3 4%, #40a6ff 5%, #40a6ff 95%, #0054e3 96%);
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Window */
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    height: 85%;
+    background: #ece9d8;
+    border: 2px outset #ece9d8;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Bar */
+.title-bar {
+    background: linear-gradient(to right, #0054e3, #40a6ff);
+    color: white;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 11px;
+    height: 24px;
+}
+
+.title-bar-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.title-bar-controls button {
+    width: 16px;
+    height: 14px;
+    border: 1px outset #c0c0c0;
+    background: #c0c0c0;
+    font-size: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.title-bar-controls button:active {
+    border: 1px inset #c0c0c0;
+}
+
+.close-btn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* Menu Bar */
+.menu-bar {
+    background: #ece9d8;
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    padding: 2px;
+    font-size: 11px;
+}
+
+.menu-item {
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.menu-item:hover {
+    background: #316ac5;
+    color: white;
+}
+
+/* Toolbar */
+.toolbar {
+    background: #ece9d8;
+    border-bottom: 1px solid #c0c0c0;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    gap: 4px;
+}
+
+.toolbar-btn {
+    width: 24px;
+    height: 24px;
+    border: 1px outset #ece9d8;
+    background: #ece9d8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.toolbar-btn:hover {
+    border: 1px inset #ece9d8;
+}
+
+.toolbar-btn:active {
+    border: 1px inset #ece9d8;
+    background: #d4d0c8;
+}
+
+.address-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.address-bar span {
+    font-size: 11px;
+}
+
+.address-bar input {
+    flex: 1;
+    padding: 2px 4px;
+    border: 2px inset #ece9d8;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    background: white;
+}
+
+/* Window Body */
+.window-body {
+    flex: 1;
+    padding: 10px;
+    background: #ece9d8;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Status Panel */
+.status-panel {
+    background: #f0f0f0;
+    border: 2px inset #ece9d8;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-icon {
+    font-size: 24px;
+}
+
+.status-text h2 {
+    font-size: 14px;
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+.status-text p {
+    font-size: 11px;
+    color: #333;
+}
+
+/* Sections */
+.section {
+    background: #f0f0f0;
+    border: 2px inset #ece9d8;
+    padding: 10px;
+}
+
+.section h3 {
+    font-size: 12px;
+    color: #000080;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+/* Video Player */
+.video-player {
+    background: #000;
+    border: 2px inset #ece9d8;
+    padding: 5px;
+}
+
+.video-player video {
+    width: 100%;
+    border: 1px solid #808080;
+    background: #000;
+}
+
+.video-controls {
+    background: #ece9d8;
+    padding: 5px;
+    font-size: 11px;
+    border-top: 1px solid #c0c0c0;
+}
+
+/* Key Input Section */
+.key-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.input-group input {
+    padding: 4px;
+    border: 2px inset #ece9d8;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    background: white;
+    width: 100%;
+}
+
+.input-group button {
+    padding: 4px 12px;
+    border: 2px outset #ece9d8;
+    background: #ece9d8;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.input-group button:active {
+    border: 2px inset #ece9d8;
+}
+
+.download-section button {
+    padding: 8px 16px;
+    border: 2px outset #ece9d8;
+    background: #ece9d8;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+}
+
+.download-section button:disabled {
+    color: #808080;
+    cursor: not-allowed;
+    border: 2px outset #ece9d8;
+}
+
+.download-section button:not(:disabled):active {
+    border: 2px inset #ece9d8;
+}
+
+.btn-icon {
+    font-size: 14px;
+}
+
+/* Status Log */
+.status-log {
+    background: white;
+    border: 2px inset #ece9d8;
+    padding: 8px;
+    min-height: 100px;
+    max-height: 150px;
+    overflow-y: auto;
+    font-family: "Courier New", monospace;
+    font-size: 10px;
+}
+
+.log-entry {
+    margin-bottom: 4px;
+    display: flex;
+    gap: 8px;
+}
+
+.timestamp {
+    color: #666;
+    font-weight: bold;
+}
+
+.message {
+    color: #000;
+}
+
+.log-entry.success .message {
+    color: #008000;
+}
+
+.log-entry.error .message {
+    color: #ff0000;
+}
+
+.log-entry.info .message {
+    color: #0000ff;
+}
+
+/* Status Bar */
+.status-bar {
+    background: #ece9d8;
+    border-top: 1px solid #c0c0c0;
+    display: flex;
+    height: 22px;
+    font-size: 11px;
+}
+
+.status-section {
+    padding: 3px 8px;
+    border-right: 1px solid #c0c0c0;
+    display: flex;
+    align-items: center;
+    border-left: 1px inset #ece9d8;
+    border-bottom: 1px inset #ece9d8;
+}
+
+.status-section:last-child {
+    border-right: none;
+    margin-left: auto;
+}
+
+/* Taskbar */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, #245edb, #1941a5);
+    border-top: 1px solid #4a90e2;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    z-index: 1000;
+}
+
+.start-button {
+    height: 26px;
+    padding: 0 8px;
+    background: linear-gradient(to bottom, #3d8bdb, #2260c4);
+    border: 1px outset #4a90e2;
+    color: white;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 3px;
+}
+
+.start-button:active {
+    border: 1px inset #4a90e2;
+    background: linear-gradient(to bottom, #2260c4, #3d8bdb);
+}
+
+.start-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.taskbar-items {
+    flex: 1;
+    display: flex;
+    gap: 2px;
+    margin-left: 8px;
+}
+
+.taskbar-item {
+    height: 22px;
+    padding: 0 8px;
+    background: linear-gradient(to bottom, #3d8bdb, #2260c4);
+    border: 1px outset #4a90e2;
+    color: white;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 2px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.taskbar-item.active {
+    border: 1px inset #4a90e2;
+    background: linear-gradient(to bottom, #2260c4, #3d8bdb);
+}
+
+.system-tray {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px;
+    color: white;
+    font-size: 11px;
+}
+
+/* Start Menu */
+.start-menu {
+    position: fixed;
+    bottom: 30px;
+    left: 2px;
+    width: 200px;
+    background: #ece9d8;
+    border: 2px outset #ece9d8;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.start-header {
+    background: linear-gradient(to right, #0054e3, #40a6ff);
+    color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.start-header img {
+    width: 24px;
+    height: 24px;
+}
+
+.start-items {
+    padding: 4px 0;
+}
+
+.start-item {
+    padding: 4px 16px;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.start-item:hover {
+    background: #316ac5;
+    color: white;
+}
+
+.start-items hr {
+    margin: 4px 8px;
+    border: none;
+    border-top: 1px solid #c0c0c0;
+}
+
+/* XP-style scrollbars */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ece9d8;
+    border: 1px inset #ece9d8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #d4d0c8, #b8b5ab);
+    border: 1px outset #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #c8c4bb, #a8a59b);
+}
+
+::-webkit-scrollbar-corner {
+    background: #ece9d8;
+}
+
+::-webkit-scrollbar-button {
+    background: linear-gradient(to bottom, #d4d0c8, #b8b5ab);
+    border: 1px outset #c0c0c0;
+    height: 16px;
+}
+
+::-webkit-scrollbar-button:hover {
+    background: linear-gradient(to bottom, #c8c4bb, #a8a59b);
+}
+
+::-webkit-scrollbar-button:active {
+    border: 1px inset #c0c0c0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .window {
+        width: 95%;
+        height: 90%;
+    }
+    
+    .toolbar {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    .address-bar {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4px;
+    }
+    
+    .key-input-section {
+        gap: 10px;
+    }
+    
+    .input-group {
+        gap: 5px;
+    }
+    
+    .section {
+        padding: 8px;
+    }
+    
+    .status-panel {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window {
+        width: 98%;
+        height: 95%;
+    }
+    
+    .window-body {
+        padding: 8px;
+        gap: 10px;
+    }
+    
+    .title-bar-text {
+        font-size: 10px;
+    }
+    
+    .menu-bar {
+        display: none;
+    }
+    
+    .toolbar {
+        padding: 2px;
+    }
+    
+    .toolbar-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+}
+
+/* Animations */
+@keyframes windowOpen {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.window {
+    animation: windowOpen 0.3s ease-out;
+}
+
+/* Button hover effects */
+button:not(:disabled):hover {
+    filter: brightness(1.1);
+}
+
+button:not(:disabled):active {
+    filter: brightness(0.9);
+}
+
+/* Focus styles */
+input:focus {
+    outline: 1px dotted #000;
+    outline-offset: -1px;
+}
+
+button:focus {
+    outline: 1px dotted #000;
+    outline-offset: -2px;
+}
+
